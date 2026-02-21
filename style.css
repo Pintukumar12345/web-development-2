@@ -1,66 +1,92 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    text-align: center;
+    background: #f4f6f9;
+}
+
+/* Navigation - Flexbox */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    padding: 15px 30px;
     color: white;
 }
 
-header {
-    padding: 40px;
-    background-color: rgba(0, 0, 0, 0.3);
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
 }
 
-section {
-    padding: 30px;
-    margin: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-}
-
-h1 {
-    font-size: 40px;
-}
-
-h2 {
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    padding: 5px;
-}
-
-a {
-    color: yellow;
+nav a {
+    color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Grid Layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
 }
 
-button {
-    background-color: black;
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Form Styling */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #2c3e50;
     color: white;
-    padding: 12px 25px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 20px;
 }
 
-button:hover {
-    background-color: #333;
+form button:hover {
+    background: #1a252f;
 }
 
-footer {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 15px;
+/* To Do */
+.todo-box {
+    display: flex;
+    gap: 10px;
+}
+
+#taskList {
+    margin-top: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+#taskList li {
+    background: #ecf0f1;
+    padding: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
 }

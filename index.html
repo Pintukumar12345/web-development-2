@@ -1,44 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Pintu Kumar | Web Developer</title>
+    <meta charset="UTF-8">
+    <title>Task 2 - Intermediate Web Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Pintu Kumar</h1>
-        <p>Aspiring Web Developer 🚀</p>
-    </header>
-
-    <section class="about">
-        <h2>About Me</h2>
-        <p>Hello! I am learning HTML, CSS and JavaScript. 
-        This is my Task 1 project for Web Development.</p>
-    </section>
-
-    <section class="skills">
-        <h2>My Skills</h2>
+    <!-- Navigation -->
+    <nav>
+        <h2>Pintu Kumar</h2>
         <ul>
-            <li>HTML Basics</li>
-            <li>CSS Styling</li>
-            <li>JavaScript Basics</li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#todo">To-Do</a></li>
         </ul>
-    </section>
+    </nav>
 
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>Email: pintukumaryadav43003@gmail.com</p>
-        <a href="https://www.linkedin.com" target="_blank">Visit My LinkedIn</a>
-    </section>
+    <!-- Main Container -->
+    <div class="container">
 
-    <button onclick="showMessage()">Click Me</button>
+        <!-- Contact Form -->
+        <section id="contact" class="card">
+            <h2>Contact Form</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Enter Your Name">
+                <input type="email" id="email" placeholder="Enter Your Email">
+                <textarea id="message" placeholder="Enter Your Message"></textarea>
+                <button type="submit">Submit</button>
+                <p id="formMessage"></p>
+            </form>
+        </section>
 
-    <footer>
-        <p>© 2026 Pintu Kumar | Task 1 Project</p>
-    </footer>
+        <!-- To Do List -->
+        <section id="todo" class="card">
+            <h2>Dynamic To-Do List</h2>
+            <div class="todo-box">
+                <input type="text" id="taskInput" placeholder="Enter new task">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="taskList"></ul>
+        </section>
 
-    <script src="script.js"></script>
+    </div>
 
+<script src="script.js"></script>
 </body>
 </html>
